@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const services = [
@@ -104,10 +105,9 @@ export default function HomePage() {
             style={{ background: "rgba(26,159,255,0.12)", border: "1px solid rgba(26,159,255,0.3)", color: "#1a9fff" }}>
             Restaurant & Service Industry Experts
           </div>
-          <div className="font-black tracking-widest mb-7 leading-none select-none"
-            style={{ fontSize: "clamp(56px,10vw,96px)", letterSpacing: "6px" }}>
-            <span style={{ color: "#1a9fff", textShadow: "0 0 60px rgba(26,159,255,0.45)" }}>BOOM</span>
-            <span style={{ color: "#fff" }}>MEDIA</span>
+          <div className="mb-7 flex justify-center">
+            <Image src="/logo.png" alt="Boom Media" width={320} height={80} priority
+              style={{ filter: "drop-shadow(0 0 40px rgba(26,159,255,0.5))" }} />
           </div>
           <h1 className="font-extrabold leading-tight mb-5" style={{ fontSize: "clamp(24px,4vw,38px)", color: "#fff" }}>
             <span style={{ color: "#1a9fff" }}>Restaurant & Service</span> Industry Experts

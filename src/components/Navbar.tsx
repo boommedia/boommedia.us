@@ -52,8 +52,14 @@ export default function Navbar() {
         >
           AI Automation ✦
         </Link>
+        <Link href="/contact" className="text-sm font-medium transition-colors duration-200"
+          style={{ color: "#7a94b8" }}
+          onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "#fff")}
+          onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "#7a94b8")}>
+          Contact
+        </Link>
         <Link
-          href="/contact"
+          href="/portal"
           className="text-sm font-bold px-5 py-2 rounded-lg transition-colors duration-200"
           style={{ background: "#1a9fff", color: "#fff", letterSpacing: "0.3px" }}
         >
@@ -101,6 +107,14 @@ export default function Navbar() {
           </Link>
           <Link
             href="/contact"
+            className="px-4 py-3 rounded-lg text-sm font-medium"
+            style={{ color: "#7a94b8" }}
+            onClick={() => setOpen(false)}
+          >
+            Contact
+          </Link>
+          <Link
+            href="/portal"
             className="mt-2 px-4 py-3 rounded-lg text-sm font-bold text-center"
             style={{ background: "#1a9fff", color: "#fff" }}
             onClick={() => setOpen(false)}
