@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { serviceSlugMap } from "@/lib/services-data";
 
 const services = [
   {
@@ -404,13 +405,82 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="font-extrabold mb-3" style={{ fontSize: "clamp(22px,3vw,32px)", color: "#fff" }}>All Services</h2>
           <p className="mb-10 text-sm" style={{ color: "#7a94b8" }}>We specialize in everything your business needs to thrive online.</p>
-          <div className="flex flex-wrap gap-2.5 justify-center">
+          <div className="flex flex-wrap gap-2.5 justify-center mb-8">
             {allServices.map((s) => (
-              <span key={s} className="px-4 py-2 rounded-lg text-sm font-medium"
-                style={{ background: "#0d1225", border: "1px solid rgba(26,159,255,0.15)", color: "#7a94b8" }}>
+              <Link key={s} href={serviceSlugMap[s] || "/services"}
+                className="px-4 py-2 rounded-lg text-sm font-medium transition-all"
+                style={{ background: "#0d1225", border: "1px solid rgba(26,159,255,0.15)", color: "#7a94b8", textDecoration: "none" }}>
                 {s}
-              </span>
+              </Link>
             ))}
+          </div>
+          <Link href="/services" className="inline-block px-6 py-2.5 rounded-lg text-sm font-bold"
+            style={{ background: "transparent", color: "#1a9fff", border: "1px solid rgba(26,159,255,0.35)" }}>
+            View All Services →
+          </Link>
+        </div>
+      </section>
+
+      {/* ── GLORIA FOOD MIGRATION CTA ── */}
+      <section className="py-20 px-6" style={{ background: "#07090f" }}>
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-2xl p-10 relative overflow-hidden"
+            style={{ background: "linear-gradient(135deg,#0d2256 0%,#0a3a90 100%)", border: "1px solid rgba(26,159,255,0.4)" }}>
+            <div className="absolute top-0 right-0 w-64 h-64 pointer-events-none rounded-full"
+              style={{ background: "radial-gradient(circle,rgba(26,159,255,0.15) 0%,transparent 70%)", transform: "translate(30%,-30%)" }} />
+            <div className="relative grid grid-cols-2 gap-10 items-center">
+              <div>
+                <div className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4"
+                  style={{ background: "rgba(248,113,113,0.15)", border: "1px solid rgba(248,113,113,0.35)", color: "#f87171" }}>
+                  GloriaFood Shutting Down?
+                </div>
+                <h2 className="font-extrabold leading-tight mb-4" style={{ fontSize: "clamp(22px,3vw,34px)", color: "#fff" }}>
+                  Switch to Boom Ordering — <span style={{ color: "#1a9fff" }}>Keep 100%</span> of Every Order
+                </h2>
+                <p className="text-sm leading-relaxed mb-6" style={{ color: "rgba(160,210,255,0.85)" }}>
+                  GloriaFood clients: migrate to our commission-free platform in under 24 hours.
+                  We&apos;ll import your menu, set up your widget, and get you live fast — no downtime.
+                </p>
+                <ul className="flex flex-col gap-2 mb-7">
+                  {[
+                    "Free menu import from GloriaFood",
+                    "Same 0% commission model you know",
+                    "iOS & Android mobile app included",
+                    "Dedicated migration support",
+                  ].map((item) => (
+                    <li key={item} className="flex items-center gap-2 text-sm"
+                      style={{ color: "rgba(160,210,255,0.85)" }}>
+                      <span style={{ color: "#1a9fff" }}>✓</span> {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex flex-wrap gap-3">
+                  <a href="https://boomonlineordering.com" target="_blank" rel="noopener noreferrer"
+                    className="px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wide"
+                    style={{ background: "#1a9fff", color: "#fff", letterSpacing: "1px" }}>
+                    Migrate for Free →
+                  </a>
+                  <Link href="/contact"
+                    className="px-6 py-3 rounded-lg font-bold text-sm uppercase tracking-wide"
+                    style={{ background: "transparent", color: "#fff", border: "1px solid rgba(255,255,255,0.3)", letterSpacing: "1px" }}>
+                    Talk to Us First
+                  </Link>
+                </div>
+              </div>
+              <div className="flex flex-col gap-4">
+                {[
+                  { label: "GloriaFood", fee: "Shutting Down", bad: true },
+                  { label: "DoorDash / Grubhub", fee: "15–30% per order", bad: true },
+                  { label: "Boom Online Ordering", fee: "0% Commission", bad: false },
+                ].map((row) => (
+                  <div key={row.label} className="rounded-xl px-5 py-4 flex items-center justify-between"
+                    style={{ background: "#0d1225", border: `1px solid ${row.bad ? "rgba(248,113,113,0.2)" : "rgba(26,159,255,0.35)"}` }}>
+                    <span className="text-sm font-semibold" style={{ color: "#fff" }}>{row.label}</span>
+                    <span className="text-sm font-bold" style={{ color: row.bad ? "#f87171" : "#1a9fff" }}>{row.fee}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
