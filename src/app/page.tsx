@@ -299,6 +299,109 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── BOOM B.A.R ── */}
+      <section className="py-24 px-6 relative overflow-hidden"
+        style={{ background: "linear-gradient(180deg,#07090f 0%,#10082a 50%,#07090f 100%)" }}>
+        <div className="absolute inset-0 pointer-events-none" style={{
+          background: "radial-gradient(ellipse 700px 400px at 50% 50%,rgba(139,92,246,0.08) 0%,transparent 70%)",
+        }} />
+        <div className="relative max-w-5xl mx-auto">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-5"
+              style={{ background: "rgba(139,92,246,0.12)", border: "1px solid rgba(139,92,246,0.35)", color: "#a78bfa" }}>
+              ✦ Boom SaaS Suite
+            </div>
+            <h2 className="font-extrabold leading-tight mb-4" style={{ fontSize: "clamp(30px,5vw,52px)", color: "#fff" }}>
+              Introducing <span style={{ color: "#a78bfa" }}>Boom B.A.R</span>
+            </h2>
+            <p className="mx-auto mb-3" style={{ fontSize: 16, color: "#7a94b8", maxWidth: 540, lineHeight: 1.7 }}>
+              Three standalone SaaS tools built by Boom Media — available to any business, anywhere.
+            </p>
+            <div className="flex gap-3 justify-center text-xs font-bold uppercase tracking-widest">
+              {[["B", "Bloggy", "#1a9fff"], ["A", "ADdee", "#f59e0b"], ["R", "Rankee", "#34d399"]].map(([letter, name, color]) => (
+                <span key={letter} className="flex items-center gap-1.5">
+                  <span className="w-6 h-6 rounded flex items-center justify-center font-black text-sm"
+                    style={{ background: `${color}22`, color, border: `1px solid ${color}44` }}>{letter}</span>
+                  <span style={{ color: "#7a94b8" }}>{name}</span>
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-3 gap-6 mb-10">
+            {/* Bloggy */}
+            <div className="rounded-2xl p-8 flex flex-col relative overflow-hidden"
+              style={{ background: "#0d1225", border: "1px solid rgba(26,159,255,0.25)" }}>
+              <div className="absolute top-0 right-0 w-40 h-40 pointer-events-none rounded-full"
+                style={{ background: "radial-gradient(circle,rgba(26,159,255,0.1) 0%,transparent 70%)", transform: "translate(30%,-30%)" }} />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center font-black text-lg mb-5"
+                style={{ background: "rgba(26,159,255,0.15)", color: "#1a9fff", border: "1px solid rgba(26,159,255,0.3)" }}>B</div>
+              <h3 className="font-extrabold text-xl mb-1" style={{ color: "#fff" }}>Bloggy</h3>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#1a9fff" }}>AI Blog Builder</p>
+              <p className="text-sm leading-relaxed mb-8 flex-1" style={{ color: "#7a94b8" }}>
+                Create, publish, and grow a blog in minutes with AI. Auto-generate SEO-optimized content,
+                schedule posts, and drive traffic — without writing a word.
+              </p>
+              <a href="https://www.bloggy.online" target="_blank" rel="noopener noreferrer"
+                className="w-full py-3 rounded-xl font-bold text-sm text-center block"
+                style={{ background: "#1a9fff", color: "#fff" }}>
+                Launch Bloggy →
+              </a>
+            </div>
+
+            {/* ADdee */}
+            <div className="rounded-2xl p-8 flex flex-col relative overflow-hidden"
+              style={{ background: "#0d1225", border: "1px solid rgba(245,158,11,0.25)" }}>
+              <div className="absolute top-0 right-0 w-40 h-40 pointer-events-none rounded-full"
+                style={{ background: "radial-gradient(circle,rgba(245,158,11,0.1) 0%,transparent 70%)", transform: "translate(30%,-30%)" }} />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center font-black text-lg mb-5"
+                style={{ background: "rgba(245,158,11,0.15)", color: "#f59e0b", border: "1px solid rgba(245,158,11,0.3)" }}>A</div>
+              <h3 className="font-extrabold text-xl mb-1" style={{ color: "#fff" }}>ADdee</h3>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#f59e0b" }}>Ad Management</p>
+              <p className="text-sm leading-relaxed mb-8 flex-1" style={{ color: "#7a94b8" }}>
+                Manage Google, Meta, and local ad campaigns from one dashboard. AI-powered targeting,
+                budget optimization, and reporting built for small businesses.
+              </p>
+              <a href="http://addee.online" target="_blank" rel="noopener noreferrer"
+                className="w-full py-3 rounded-xl font-bold text-sm text-center block"
+                style={{ background: "#f59e0b", color: "#0d1225" }}>
+                Launch ADdee →
+              </a>
+            </div>
+
+            {/* Rankee */}
+            <div className="rounded-2xl p-8 flex flex-col relative overflow-hidden"
+              style={{ background: "#0d1225", border: "1px solid rgba(52,211,153,0.25)" }}>
+              <div className="absolute top-0 right-0 w-40 h-40 pointer-events-none rounded-full"
+                style={{ background: "radial-gradient(circle,rgba(52,211,153,0.1) 0%,transparent 70%)", transform: "translate(30%,-30%)" }} />
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center font-black text-lg mb-5"
+                style={{ background: "rgba(52,211,153,0.15)", color: "#34d399", border: "1px solid rgba(52,211,153,0.3)" }}>R</div>
+              <h3 className="font-extrabold text-xl mb-1" style={{ color: "#fff" }}>Rankee</h3>
+              <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "#34d399" }}>Rank Tracker</p>
+              <p className="text-sm leading-relaxed mb-8 flex-1" style={{ color: "#7a94b8" }}>
+                Track your Google rankings daily, monitor competitors, and get actionable SEO insights.
+                Know exactly where you stand and what to do next to climb higher.
+              </p>
+              <a href="https://www.rankee.online" target="_blank" rel="noopener noreferrer"
+                className="w-full py-3 rounded-xl font-bold text-sm text-center block"
+                style={{ background: "#34d399", color: "#0d1225" }}>
+                Launch Rankee →
+              </a>
+            </div>
+          </div>
+
+          <div className="rounded-2xl p-6 text-center"
+            style={{ background: "rgba(139,92,246,0.07)", border: "1px solid rgba(139,92,246,0.2)" }}>
+            <p className="text-sm" style={{ color: "#7a94b8" }}>
+              All three tools are built and maintained by{" "}
+              <span style={{ color: "#a78bfa", fontWeight: 600 }}>Boom Media</span>
+              {" "}— the same team behind your restaurant&apos;s digital presence.{" "}
+              <a href="/contact" style={{ color: "#a78bfa", fontWeight: 600 }}>Get early access →</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── VISION ── */}
       <section className="py-24 px-6 text-center" style={{ background: "#07090f" }}>
         <div className="max-w-2xl mx-auto">

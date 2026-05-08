@@ -11,6 +11,7 @@ const navLinks = [
   { label: "Hosting", href: "/hosting" },
   { label: "Maintenance", href: "/maintenance" },
   { label: "Blog", href: "/blog" },
+  { label: "B.A.R", href: "/bar" },
 ];
 
 export default function Navbar() {
