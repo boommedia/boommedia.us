@@ -106,7 +106,7 @@ export default function HomePage() {
             Restaurant & Service Industry Experts
           </div>
           <div className="mb-7 flex justify-center">
-            <Image src="/logo.png" alt="Boom Media" width={960} height={240} priority
+            <Image src="/logo.png" alt="Boom Media" width={625} height={115} priority
               style={{ filter: "drop-shadow(0 0 60px rgba(26,159,255,0.55))", maxWidth: "100%" }} />
           </div>
           <h1 className="font-extrabold leading-tight mb-5" style={{ fontSize: "clamp(24px,4vw,38px)", color: "#fff" }}>
