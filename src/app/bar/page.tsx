@@ -74,7 +74,7 @@ export default function BARPage() {
             ✦ Boom SaaS Suite
           </div>
           <h1 className="font-extrabold leading-tight mb-5" style={{ fontSize: "clamp(38px,6vw,72px)", color: "#fff" }}>
-            Boom <span style={{ color: "#a78bfa" }}>B.A.R</span>
+            BOOM <span style={{ color: "#a78bfa" }}>B.A.R</span>
           </h1>
           <p className="mb-8 mx-auto" style={{ fontSize: 17, color: "#7a94b8", maxWidth: 520, lineHeight: 1.7 }}>
             Three powerful SaaS tools built by Boom Media — available to any business, anywhere in the world.

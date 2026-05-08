@@ -162,7 +162,7 @@ export default function HomePage() {
               ✦ Boom SaaS Suite
             </div>
             <h2 className="font-extrabold leading-tight mb-4" style={{ fontSize: "clamp(30px,5vw,52px)", color: "#fff" }}>
-              Introducing <span style={{ color: "#a78bfa" }}>Boom B.A.R</span>
+              Introducing <span style={{ color: "#a78bfa" }}>BOOM B.A.R</span>
             </h2>
             <p className="mx-auto mb-3" style={{ fontSize: 16, color: "#7a94b8", maxWidth: 540, lineHeight: 1.7 }}>
               Three standalone SaaS tools built by Boom Media — available to any business, anywhere.
