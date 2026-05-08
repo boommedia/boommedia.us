@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/lib/supabase";
+import { getSupabase } from "@/lib/supabase";
 
 const services = [
   "AI Automation / Chatbot",
@@ -24,7 +24,7 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
-    const { error } = await supabase.from("contact_submissions").insert([form]);
+    const { error } = await getSupabase().from("contact_submissions").insert([form]);
     setStatus(error ? "error" : "success");
   };
 
