@@ -28,7 +28,7 @@ const services = [
     card: "blue",
   },
   {
-    eyebrow: "Oracle Partner",
+    eyebrow: "Square Partner",
     title: "POS",
     titleSecond: "Systems",
     titleSecondColor: "#1a9fff",

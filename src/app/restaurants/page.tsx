@@ -11,9 +11,9 @@ const solutions = [
   {
     icon: "🖥️",
     title: "POS Systems",
-    body: "Oracle-partnered restaurant POS software with free hardware. Intuitive, fast to deploy with table service and dedicated POS layout.",
+    body: "Square-partnered restaurant POS software with free hardware. Intuitive, fast to deploy with table service and dedicated POS layout.",
     href: "/restaurants/pos",
-    tag: "Oracle Partner",
+    tag: "Square Partner",
   },
   {
     icon: "📺",

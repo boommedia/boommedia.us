@@ -35,8 +35,8 @@ const posts = [
   },
   {
     category: "POS Systems",
-    title: "Oracle MICROS vs. Square vs. Toast: A Restaurant POS Comparison",
-    excerpt: "We've set up dozens of POS systems. Here's our honest comparison of the major platforms — features, pricing, pros, and cons for full-service restaurants.",
+    title: "Square vs. Toast vs. Clover: Choosing the Right Restaurant POS in 2025",
+    excerpt: "We've set up dozens of POS systems. Here's our honest comparison of the top platforms — features, pricing, pros, and cons for full-service restaurants.",
     date: "March 2025",
     readTime: "7 min read",
     slug: "pos-comparison-oracle-square-toast",

@@ -19,13 +19,13 @@ export default function POSPage() {
         <div className="relative max-w-3xl mx-auto">
           <div className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-5"
             style={{ background: "rgba(26,159,255,0.12)", border: "1px solid rgba(26,159,255,0.3)", color: "#1a9fff" }}>
-            Oracle Partner
+            Square Partner
           </div>
           <h1 className="font-extrabold leading-tight mb-5" style={{ fontSize: "clamp(32px,5vw,54px)", color: "#fff" }}>
             Restaurant <span style={{ color: "#1a9fff" }}>POS Systems</span>
           </h1>
           <p className="mb-10 mx-auto" style={{ fontSize: 17, color: "#7a94b8", maxWidth: 580, lineHeight: 1.7 }}>
-            State-of-the-art Oracle POS software with free hardware. Purpose-built for restaurants —
+            Square POS software with free hardware. Purpose-built for restaurants —
             table service, quick service, bars, and multi-location operations.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
@@ -49,10 +49,10 @@ export default function POSPage() {
             <p className="text-xs font-bold uppercase tracking-widest mb-3" style={{ color: "rgba(160,210,255,0.7)" }}>
               Certified Partner
             </p>
-            <h2 className="font-extrabold text-2xl mb-3" style={{ color: "#fff" }}>Oracle MICROS Point of Sale</h2>
+            <h2 className="font-extrabold text-2xl mb-3" style={{ color: "#fff" }}>Square for Restaurants</h2>
             <p className="text-sm leading-relaxed mx-auto" style={{ color: "rgba(160,210,255,0.85)", maxWidth: 480 }}>
-              Oracle MICROS is the world&apos;s #1 restaurant POS platform used by chains and independent
-              operators globally. As a certified Oracle partner, Boom Media handles implementation,
+              Square for Restaurants is a leading POS platform trusted by thousands of independent
+              operators and growing chains. As a certified Square partner, Boom Media handles implementation,
               training, and ongoing support.
             </p>
           </div>
