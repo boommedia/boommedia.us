@@ -106,8 +106,8 @@ export default function HomePage() {
             Restaurant & Service Industry Experts
           </div>
           <div className="mb-7 flex justify-center">
-            <Image src="/logo.png" alt="Boom Media" width={320} height={80} priority
-              style={{ filter: "drop-shadow(0 0 40px rgba(26,159,255,0.5))" }} />
+            <Image src="/logo.png" alt="Boom Media" width={960} height={240} priority
+              style={{ filter: "drop-shadow(0 0 60px rgba(26,159,255,0.55))", maxWidth: "100%" }} />
           </div>
           <h1 className="font-extrabold leading-tight mb-5" style={{ fontSize: "clamp(24px,4vw,38px)", color: "#fff" }}>
             <span style={{ color: "#1a9fff" }}>Restaurant & Service</span> Industry Experts
