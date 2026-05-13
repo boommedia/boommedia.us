@@ -40,6 +40,25 @@ const apps = [
     ],
   },
   {
+    letter: "A",
+    name: "Approvee",
+    tagline: "Approval Workflows",
+    url: "https://www.approvee.online",
+    color: "#a78bfa",
+    colorBg: "rgba(167,139,250,0.12)",
+    colorBorder: "rgba(167,139,250,0.3)",
+    description:
+      "Streamline approvals, contracts, and sign-offs with automated workflows. Get the right eyes on the right documents — fast.",
+    features: [
+      "Drag-and-drop approval flows",
+      "E-signature & document sign-off",
+      "Automated reminders & escalations",
+      "Multi-step review chains",
+      "Audit trail & compliance logs",
+      "Team & client portals",
+    ],
+  },
+  {
     letter: "R",
     name: "Rankee",
     tagline: "Rank Tracker",
@@ -58,9 +77,36 @@ const apps = [
       "White-label reporting",
     ],
   },
+  {
+    letter: "S",
+    name: "Servvee",
+    tagline: "Service Management",
+    url: "https://www.servvee.online",
+    color: "#06b6d4",
+    colorBg: "rgba(6,182,212,0.12)",
+    colorBorder: "rgba(6,182,212,0.3)",
+    description:
+      "All-in-one service business management — scheduling, menus, customer orders, and staff dashboards built for restaurants and service companies.",
+    features: [
+      "Service & menu management",
+      "Customer order dashboard",
+      "Staff scheduling & assignments",
+      "Real-time status tracking",
+      "Multi-location support",
+      "Client-facing booking portal",
+    ],
+  },
 ];
 
-export default function BARPage() {
+const acronym = [
+  { letter: "B", name: "Bloggy", color: "#1a9fff" },
+  { letter: "A", name: "ADdee", color: "#f59e0b" },
+  { letter: "A", name: "Approvee", color: "#a78bfa" },
+  { letter: "R", name: "Rankee", color: "#34d399" },
+  { letter: "S", name: "Servvee", color: "#06b6d4" },
+];
+
+export default function BARSPage() {
   return (
     <>
       {/* ── HERO ── */}
@@ -74,24 +120,20 @@ export default function BARPage() {
             ✦ Boom SaaS Suite
           </div>
           <h1 className="font-extrabold leading-tight mb-5" style={{ fontSize: "clamp(38px,6vw,72px)", color: "#fff" }}>
-            BOOM <span style={{ color: "#a78bfa" }}>B.A.R</span>
+            BOOM <span style={{ color: "#a78bfa" }}>B.A.A.R.S</span>
           </h1>
-          <p className="mb-8 mx-auto" style={{ fontSize: 17, color: "#7a94b8", maxWidth: 520, lineHeight: 1.7 }}>
-            Three powerful SaaS tools built by Boom Media — available to any business, anywhere in the world.
+          <p className="mb-8 mx-auto" style={{ fontSize: 17, color: "#7a94b8", maxWidth: 560, lineHeight: 1.7 }}>
+            Five powerful SaaS tools built by Boom Media — available to any business, anywhere in the world.
           </p>
 
-          {/* BAR acronym breakdown */}
+          {/* BAARS acronym breakdown */}
           <div className="inline-flex gap-0 rounded-2xl overflow-hidden mb-10"
             style={{ border: "1px solid rgba(139,92,246,0.2)" }}>
-            {[
-              { letter: "B", name: "Bloggy", color: "#1a9fff" },
-              { letter: "A", name: "ADdee", color: "#f59e0b" },
-              { letter: "R", name: "Rankee", color: "#34d399" },
-            ].map((item, i) => (
-              <div key={item.letter} className="px-8 py-4 text-center"
+            {acronym.map((item, i) => (
+              <div key={`${item.letter}-${item.name}`} className="px-6 py-4 text-center"
                 style={{
                   background: "#0d1225",
-                  borderRight: i < 2 ? "1px solid rgba(139,92,246,0.15)" : "none",
+                  borderRight: i < acronym.length - 1 ? "1px solid rgba(139,92,246,0.15)" : "none",
                 }}>
                 <div className="font-black text-3xl mb-1" style={{ color: item.color }}>{item.letter}</div>
                 <div className="text-xs font-bold" style={{ color: "#7a94b8" }}>{item.name}</div>
@@ -121,15 +163,17 @@ export default function BARPage() {
                 <p className="text-sm leading-relaxed mb-7" style={{ color: "#7a94b8" }}>{app.description}</p>
                 <a href={app.url} target="_blank" rel="noopener noreferrer"
                   className="inline-block px-7 py-3 rounded-xl font-bold text-sm"
-                  style={{ background: app.color, color: app.color === "#f59e0b" || app.color === "#34d399" ? "#0d1225" : "#fff" }}>
+                  style={{
+                    background: app.color,
+                    color: ["#f59e0b", "#34d399", "#06b6d4"].includes(app.color) ? "#0d1225" : "#fff",
+                  }}>
                   Launch {app.name} →
                 </a>
               </div>
               <div>
                 <ul className="flex flex-col gap-3">
                   {app.features.map((f) => (
-                    <li key={f} className="flex items-center gap-3 text-sm"
-                      style={{ color: "#7a94b8" }}>
+                    <li key={f} className="flex items-center gap-3 text-sm" style={{ color: "#7a94b8" }}>
                       <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: app.color }} />
                       {f}
                     </li>
@@ -151,7 +195,7 @@ export default function BARPage() {
             <span style={{ color: "#a78bfa" }}>For Everyone.</span>
           </h2>
           <p className="mb-8 mx-auto" style={{ fontSize: 16, color: "#7a94b8", maxWidth: 440, lineHeight: 1.7 }}>
-            All three tools are actively being developed by the Boom Media team.
+            All five tools are actively being developed by the Boom Media team.
             Sign up for early access and be the first to know when they launch.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
